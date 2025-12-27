@@ -71,3 +71,4 @@ docker-compose.override.yml
 
 ### Misc ###
 HELP.md
+.env
