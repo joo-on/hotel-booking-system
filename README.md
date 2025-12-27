@@ -4,9 +4,13 @@ A high-concurrency hotel booking platform designed to handle **inventory consist
 Inspired by real-world OTA systems (e.g., Yanolja), this project demonstrates how to manage bookings at scale.
 
 ## ✨ Features
-- **Inventory Management**  
+- **Property Service**
+    - Static hotel content (basic info, amenities, images)
+    - Optimized for read-heavy access patterns
+
+- **Inventory Management (ARI: Availability, Rate, Inventory)**  
   - Prevent overbooking with row-level locking & optimistic concurrency control  
-  - Support room-level inventory and multi-night surcharge pricing  
+  - Support room-level inventory and multi-night surcharge pricing
 
 - **Booking & Payment**  
   - End-to-end booking flow with transactional integrity  
@@ -43,6 +47,16 @@ Inspired by real-world OTA systems (e.g., Yanolja), this project demonstrates ho
 - Apache Kafka (event streaming)  
 - Docker, Testcontainers  
 - JUnit 5, RestAssured  
+
+## ▶️ Running Locally
+### Infrastructure (Docker Compose)
+```bash
+docker compose up -d
+```
+### Services (Local Run)
+- Use Docker Compose for infrastructure only (DB/Redis/Mongo/Kafka).
+- Run each service locally via Gradle (e.g., `./gradlew :services:property-service:bootRun`).
+- Use `-Pdotenv` if you want to apply `.env`: `./gradlew :services:property-service:bootRun -Pdotenv`.
 
 ## 📚 What I Learned
 - Designing **CQRS & Event Sourcing** for booking flows  
