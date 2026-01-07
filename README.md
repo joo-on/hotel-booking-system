@@ -5,8 +5,10 @@ Inspired by real-world OTA systems (e.g., Yanolja), this project demonstrates ho
 
 ## ✨ Features
 - **Property Service**
-    - Static hotel content (basic info, amenities, images)
-    - Optimized for read-heavy access patterns
+  - Hotel metadata with **version control & audit trail** for data integrity
+  - **Multi-language support** (name, address, policies) for global operations
+  - **DDD Aggregate pattern** with app-level integrity (no foreign keys)
+  - MySQL POINT + SPATIAL INDEX for location-based queries
 
 - **Inventory Management (ARI: Availability, Rate, Inventory)**  
   - Prevent overbooking with row-level locking & optimistic concurrency control  
@@ -41,11 +43,11 @@ Inspired by real-world OTA systems (e.g., Yanolja), this project demonstrates ho
   - Enables scalable, loosely coupled microservices  
 
 ## 🛠 Tech Stack
-- Java 25 (LTS), Spring Boot 3, Spring Data JPA  
-- MySQL, Redis  
-- MongoDB (hotel reviews, logs)  
-- Apache Kafka (event streaming)  
-- Docker, Testcontainers  
+- Java 25 (LTS), Spring Boot 3, Spring Data JPA
+- MySQL 8.0+ (SPATIAL INDEX, JSON, CHECK constraints), Redis
+- MongoDB (hotel reviews, logs)
+- Apache Kafka (event streaming)
+- Docker, Testcontainers
 - JUnit 5, RestAssured  
 
 ## ▶️ Running Locally
@@ -59,7 +61,9 @@ docker compose up -d
 - Use `-Pdotenv` if you want to apply `.env`: `./gradlew :services:property-service:bootRun -Pdotenv`.
 
 ## 📚 What I Learned
-- Designing **CQRS & Event Sourcing** for booking flows  
-- Handling **concurrency & transactional consistency** under high load  
-- Applying **Kafka for asynchronous communication** between services  
+- Designing **CQRS & Event Sourcing** for booking flows
+- Handling **concurrency & transactional consistency** under high load
+- Applying **Kafka for asynchronous communication** between services
+- Implementing **DDD patterns & version control** for data integrity
+- Designing **multi-language support** for global service scalability
 - Balancing business features (pricing, coupons, membership) with system reliability  
