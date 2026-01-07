@@ -9,6 +9,7 @@ spring-boot-jpa = { group = "org.springframework.boot", name = "spring-boot-star
 spring-boot-security = { group = "org.springframework.boot", name = "spring-boot-starter-security" }
 spring-boot-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
 mysql-connector = { group = "com.mysql", name = "mysql-connector-j" }
+flyway-mysql = { group = "org.flywaydb", name = "flyway-mysql" }
 
 
 [plugins]

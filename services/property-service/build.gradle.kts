@@ -11,6 +11,7 @@ dependencies {
     implementation(libs.spring.boot.web)
     implementation(libs.spring.boot.jpa)
     runtimeOnly(libs.mysql.connector)
+    implementation(libs.flyway.mysql)
     implementation(libs.spring.boot.security)
 
     testImplementation(libs.spring.boot.test)
