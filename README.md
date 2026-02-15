@@ -43,7 +43,7 @@ Inspired by real-world OTA systems (e.g., Yanolja), this project demonstrates ho
   - Enables scalable, loosely coupled microservices  
 
 ## 🛠 Tech Stack
-- Java 25 (LTS), Spring Boot 3, Spring Data JPA
+- Java 25, Spring Boot 4, Spring Data JPA
 - MySQL 8.0+ (SPATIAL INDEX, JSON, CHECK constraints), Redis
 - MongoDB (hotel reviews, logs)
 - Apache Kafka (event streaming)

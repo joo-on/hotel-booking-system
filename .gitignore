@@ -72,3 +72,12 @@ docker-compose.override.yml
 ### Misc ###
 HELP.md
 .env
+
+### AI Assistant ###
+# Claude personal settings and memory
+.claude/
+
+# Learning and experimental code
+*Sample.java
+sandbox/
+experiments/
